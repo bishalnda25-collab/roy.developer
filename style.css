@@ -54,3 +54,11 @@ p {
     margin: auto;
     line-height: 1.6;
 }
+h1 {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
