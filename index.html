@@ -1,25 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>roy.dev</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>roy.dev | Developer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
 
+body{
+  font-family:'Poppins',sans-serif;
+  color:white;
+  background:linear-gradient(-45deg,#0f0f23,#1a1a2e,#16213e,#0f172a);
+  background-size:400% 400%;
+  animation:bg 10s ease infinite;
+}
+
+@keyframes bg{
+  0%{background-position:0%}
+  50%{background-position:100%}
+  100%{background-position:0%}
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  position:fixed;
+  width:100%;
+  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,0.4);
+  z-index:100;
+}
+
+/* LOGO AREA */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* IMAGE PLACEHOLDER */
+.logo img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:2px solid #6366f1;
+}
+
+/* TEXT LOGO */
+.logo-text{
+  font-size:1.4rem;
+  font-weight:600;
+  color:#6366f1;
+}
+
+/* NAV LINKS */
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#6366f1;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+h1{
+  font-size:3rem;
+}
+
+#dynamic-text{
+  color:#6366f1;
+}
+
+/* BUTTON */
+.btn{
+  margin-top:30px;
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#6366f1,#8b5cf6);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 10px 25px rgba(99,102,241,0.5);
+}
+
+/* PROJECTS */
+.projects{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.projects h2{
+  font-size:2rem;
+  margin-bottom:40px;
+}
+
+.grid{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.card{
+  width:300px;
+  padding:25px;
+  border-radius:20px;
+  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+  box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:0.9rem;
+  color:#ccc;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#111;
+  margin-top:50px;
+}
 </style>
-<body>
-   <img width="250" src="logo.png" alt="logo">
-   <li><a href="war-game.html">War Game (Unreal Engine)</a></li>
-<li><a href="python-project.html">Python Tool</a></li>
-<h1>I am Roy</h1>
-<p>A beginner developer building games & web projects</p>
+</head>
 
+<body>
+
+<nav>
+  <div class="logo">
+    <!-- 🔥 ADD YOUR LOGO IMAGE HERE -->
+    <img src="logo.png" alt="logo">
+    
+    <div class="logo-text">roy.dev</div>
+  </div>
+
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <h1>
+    Hi, I'm <span style="color:#6366f1;">roy.dev</span><br>
+    I build <span id="dynamic-text"></span>
+  </h1>
+
+  <a href="#projects">
+    <button class="btn">🚀 View Projects</button>
+  </a>
+</section>
+
+<section class="projects" id="projects">
+  <h2>🔥 Featured Projects</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🎮 War Card Game</h3>
+      <p>Browser-based card game built with JavaScript.</p>
+      <p><strong>Tech:</strong> HTML, CSS, JS</p>
+      <p><strong>Learned:</strong> Game logic, DOM</p>
+      <br>
+      <a href="https://bishalnda25-collab.github.io/roy.developer/war-game.html" target="_blank">
+        <button class="btn">Play</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>🐍 Python Project</h3>
+      <p>Coming soon...</p>
+      <button class="btn">Soon</button>
+    </div>
+
+  </div>
+</section>
 
 <footer>
-<p>contact me : <a href="mailto:Bishalnda25@gmail.com">Email</a>  </p>
+  <p>© 2026 roy.dev — Built with 💻🔥</p>
 </footer>
-    
+
+<script>
+const words=["Python Projects 🐍","C++ Systems ⚙️","JavaScript Apps 🌐","Games 🎮"];
+let i=0,j=0,current="",isDeleting=false;
+
+function type(){
+  current=words[i];
+  document.getElementById("dynamic-text").textContent=current.substring(0,j);
+
+  if(!isDeleting && j<current.length){
+    j++;
+  } else if(isDeleting && j>0){
+    j--;
+  } else if(j===current.length){
+    isDeleting=true;
+    setTimeout(type,1000);
+    return;
+  } else{
+    isDeleting=false;
+    i=(i+1)%words.length;
+  }
+
+  setTimeout(type,isDeleting?50:100);
+}
+
+type();
+</script>
+
 </body>
 </html>
