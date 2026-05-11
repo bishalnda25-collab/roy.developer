@@ -172,7 +172,10 @@ footer{
     <img src="logo.png" alt="logo">
     
     <div class="logo-text">roy.dev</div>
-  </div>
+
+    <H1> 404 Error !!   Website unesr constaracting!!! </H1>
+    <h1> soon It will stard</h1>
+  <!-- </div>
 
   <ul>
     <li><a href="#home">Home</a></li>
@@ -211,7 +214,7 @@ footer{
       <h3>🐍 Python Project</h3>
       <p>Coming soon...</p>
       <button class="btn">Soon</button>
-    </div>
+    </div> -->
 
   </div>
 </section>
@@ -221,30 +224,30 @@ footer{
 </footer>
 
 <script>
-const words=["Python Projects 🐍","C++ Systems ⚙️","JavaScript Apps 🌐","Games 🎮"];
-let i=0,j=0,current="",isDeleting=false;
+//const words=["Python Projects 🐍","C++ Systems ⚙️","JavaScript Apps 🌐","Games 🎮"];
+//let i=0,j=0,current="",isDeleting=false;
 
-function type(){
-  current=words[i];
-  document.getElementById("dynamic-text").textContent=current.substring(0,j);
+//function type(){
+  //current=words[i];
+  //document.getElementById("dynamic-text").textContent=current.substring(0,j);
 
-  if(!isDeleting && j<current.length){
-    j++;
-  } else if(isDeleting && j>0){
-    j--;
-  } else if(j===current.length){
-    isDeleting=true;
-    setTimeout(type,1000);
-    return;
-  } else{
-    isDeleting=false;
-    i=(i+1)%words.length;
-  }
+  //i//f(!isDeleting && j<current.length){
+//     j++;
+//   } else if(isDeleting && j>0){
+//     j--;
+//   } else if(j===current.length){
+//     isDeleting=true;
+//     setTimeout(type,1000);
+//     return;
+//   } else{
+//     isDeleting=false;
+//     i=(i+1)%words.length;
+//   }
 
-  setTimeout(type,isDeleting?50:100);
-}
+//   setTimeout(type,isDeleting?50:100);
+// }
 
-type();
+// type();
 </script>
 
 </body>
